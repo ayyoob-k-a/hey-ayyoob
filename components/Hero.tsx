@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import heroImage from "../public/hero-image.png";
@@ -103,10 +102,17 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 1.5, ease: customEase }}
         className="absolute bottom-[2vh] right-[5vw] md:bottom-[5vh] md:right-[5vw] z-50 pointer-events-auto"
       >
-        <button className="group flex items-center gap-2 md:gap-3 rounded-full border border-[#FF4D2E] bg-black/40 backdrop-blur-md text-[#FF4D2E] px-4 py-2 md:px-6 md:py-3 font-semibold shadow-lg hover:bg-[#FF4D2E] hover:text-white transition-all duration-300 text-xs md:text-base">
+        <button className="group flex items-center justify-center gap-2 md:gap-3 px-5 py-2.5 md:px-7 md:py-3.5 rounded-full
+          bg-gradient-to-br from-slate-700/30 to-blue-900/10
+          backdrop-blur-xl
+          border border-white/10 border-t-white/20 border-l-white/20
+          shadow-[0_8px_32px_0_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)]
+          hover:from-slate-700/40 hover:to-blue-900/20 transition-all duration-300
+          text-white/90 text-xs md:text-base font-semibold tracking-wide
+        ">
           START A PROJECT
-          <span className="flex items-center justify-center bg-[#FF4D2E] text-white group-hover:bg-white group-hover:text-[#FF4D2E] transition-colors rounded-full p-1 w-5 h-5 md:w-6 md:h-6">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 md:w-4 md:h-4">
+          <span className="flex items-center justify-center bg-white/90 text-slate-900 transition-transform group-hover:scale-110 rounded-full p-1.5 w-6 h-6 md:w-7 md:h-7 shadow-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 md:w-4 md:h-4">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </span>

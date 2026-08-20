@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [time, setTime] = useState<Date | null>(null);
@@ -37,14 +38,14 @@ export default function Navbar() {
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 flex items-start justify-between px-6 py-8 md:px-12 bg-transparent text-white w-full">
       {/* Left side: Massive Wordmark */}
-      <div className="relative z-40 pointer-events-none flex items-start">
-        <h1 className="text-[clamp(3.5rem,10vw,9rem)] leading-[0.8] font-black text-[#D3D3D3] tracking-tighter uppercase m-0 p-0 drop-shadow-lg">
+      <motion.div layoutId="brand-name" className="relative z-40 pointer-events-none flex items-start" transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
+        <h1 className="text-[clamp(3.5rem,10vw,9rem)] leading-[0.8] font-black text-[#D3D3D3] tracking-tighter uppercase m-0 p-0">
           AYYOOB
         </h1>
-        <span className="text-[clamp(0.875rem,2vw,1.5rem)] ml-1 md:ml-2 mt-1 md:mt-2 font-bold text-[#D3D3D3] drop-shadow-md">
+        <span className="text-[clamp(0.875rem,2vw,1.5rem)] ml-1 md:ml-2 mt-1 md:mt-2 font-bold text-[#D3D3D3]">
           KA
         </span>
-      </div>
+      </motion.div>
 
       {/* Right side */}
       <div className="flex flex-row items-center gap-4 md:gap-6">
